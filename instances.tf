@@ -1,4 +1,4 @@
-provider "softlayer" {
+provider "ibm" {
 }
 
 variable "datacenter" {
@@ -62,7 +62,7 @@ resource "ibm_compute_ssh_key" "temp_public_key" {
 }
 
 
-resource "softlayer_virtual_guest" "windows" {
+resource "ibm_compute_vm_instance" "windows" {
     
     datacenter  = "${var.datacenter}"
     domain      = "${var.domain}"
